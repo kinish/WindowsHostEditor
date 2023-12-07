@@ -107,12 +107,19 @@ namespace hostsEditor
             if (listBox1.SelectedIndex != -1)
             {
                 var index = listBox1.SelectedIndex;
+                var topIndex = listBox1.TopIndex; // Запоминаем текущую позицию прокрутки
+
                 var line = hostsLines[index];
                 hostsLines[index] = line.StartsWith("#") ? line.Substring(1) : "#" + line;
+
                 UpdateListBox();
                 SaveHostsFile();
+
+                listBox1.TopIndex = topIndex; // Восстанавливаем позицию прокрутки
+                listBox1.SelectedIndex = index; // Восстанавливаем выбранную строку
             }
         }
+
 
         private void DrawListBoxItem(object sender, DrawItemEventArgs e)
         {
