@@ -15,7 +15,7 @@
 - .NET Framework 4.5 or newer.
 
 ### Installation
-1. Download the latest release from the [Releases](https://github.com/kinish/WindowsHostsEditor/releases) page.
+1. Download the latest release from the [Releases](https://github.com/kinish/WindowsHostEditor/releases) page.
 2. Unzip the downloaded file.
 3. Run `WindowsHostsEditor.exe`.
 
